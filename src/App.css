@@ -1,0 +1,17 @@
+.App {
+    text-align: center;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .Link {
+    text-align: center;    
+    margin-left: 20px;
+  }
+ 
+  .navBar {
+      background-color: gray;
+      text-align: center;
+  }
