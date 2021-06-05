@@ -8,7 +8,6 @@ const MakeRoutine = ({ setDisplayMessage, setIsShown, loggedIn }) => {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("Say Cheese!!!");
         const [name, goal] = event.target;
         
         if(name.value && goal.value){
@@ -27,7 +26,6 @@ const MakeRoutine = ({ setDisplayMessage, setIsShown, loggedIn }) => {
         if(newRoutine) {
             try{
                 const response = await createRoutines(newRoutine);
-                console.log(response)
                 setFinished(true)
     
             }catch (error) {

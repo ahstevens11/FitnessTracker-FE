@@ -47,7 +47,6 @@ const App = () => {
           { !loggedIn ? (<Link className="Link" to= '/Register'>Sign Up</Link>) : null}
           {loggedIn ? <Link className="Link" onClick={() => {
                         clearToken();
-                        //setUsername(null);
                         setLoggedIn(null);
                         setAuthorized(null)
                         setCurrentUser(null)

@@ -29,7 +29,7 @@ const MyRoutines = ({ loggedIn, currentUser, activities }) => {
         count,
         duration
       );
-      console.log(response);
+
       if (!response.id) {
         return alert("Something went wrong");
       }
@@ -61,7 +61,6 @@ const MyRoutines = ({ loggedIn, currentUser, activities }) => {
   };
 
   const handleSubmitDeleteActivity = async (id) => {
-      console.log (id)
     try {
       const activity = await deleteActivityApi(id); //<--change to currentUser
     } catch (error) {
@@ -82,10 +81,8 @@ const MyRoutines = ({ loggedIn, currentUser, activities }) => {
       return;
     }
     try {
-      const routines = await fetchUserRoutines(currentUser); //<--change to currentUser
+      const routines = await fetchUserRoutines(currentUser); 
       setUserRoutines(routines);
-      console.log(routines);
-      console.log(activities);
     } catch (error) {
       console.error(error);
     }

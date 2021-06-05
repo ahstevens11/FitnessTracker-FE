@@ -87,7 +87,6 @@ export const applyActivityToRoutine = async (
   countV,
   durationV
 ) => {
-  console.log(activityIdV, countV, durationV);
   try {
     const response = await fetch(`${baseURL}routines/${routineId}/activities`, {
       method: "POST",
@@ -109,9 +108,6 @@ export const applyActivityToRoutine = async (
 
 export const updateRoutineApi = async (name, goal, routineId) => {
   let payload = {};
-  console.log(goal);
-  console.log(routineId);
-  console.log(name);
   let newName = prompt("What would you like to change the name to?", name);
   let newGoal = prompt("What would you like to change the goal to?", goal);
   if (newName) {
@@ -122,7 +118,6 @@ export const updateRoutineApi = async (name, goal, routineId) => {
     payload.goal = newGoal;
   }
 
-  console.log(routineId);
 
   try {
     const response = await fetch(`${baseURL}routines/${routineId}`, {
@@ -142,9 +137,6 @@ export const updateRoutineApi = async (name, goal, routineId) => {
 
 export const updateActivitiesApi = async (id, count, duration) => {
   let payload = {};
-  console.log(id);
-  console.log(count);
-  console.log(duration);
   let newCount = prompt("What would you like to change the count?", count);
   let newDuration = prompt(
     "What would you like to change the duration?",
@@ -152,8 +144,6 @@ export const updateActivitiesApi = async (id, count, duration) => {
   );
 
   payload = { count: newCount, duration: newDuration };
-
-  console.log(payload);
 
   try {
     const response = await fetch(`${baseURL}/routine_activities/${id}`, {
@@ -189,8 +179,6 @@ export const deleteActivityApi = async (id) => {
 };
 
 export const deleteRoutineApi = async (id) => {
-  console.log(id);
-  console.log(token);
 
   try {
     const response = await fetch(`${baseURL}/routines/${id}`, {

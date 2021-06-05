@@ -1,5 +1,5 @@
   
-import {/* useEffect,  */useState} from 'react'
+import {useState} from 'react'
 import {createActivity, fetchAllActivites} from '../api'
 
 const Activities = ({activities, loggedIn, setActivities}) =>{
@@ -8,7 +8,7 @@ const Activities = ({activities, loggedIn, setActivities}) =>{
         try{
             event.preventDefault()
             const response = await createActivity(newActivity) 
-            console.log(response)
+
             if(response.id){
             alert("success creating activity")
                 setActivities(await fetchAllActivites())
