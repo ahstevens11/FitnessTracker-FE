@@ -15,7 +15,7 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch(
-      "http://fitnesstrac-kr.herokuapp.com/api/users/login",
+      "https://fitnesstrac-kr.herokuapp.com/api/users/login",
       {
         method: "POST",
         headers: {

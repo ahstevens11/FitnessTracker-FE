@@ -170,10 +170,10 @@ const MyRoutines = ({ loggedIn, currentUser, activities }) => {
 
                 <form onSubmit={handleSubmit}>
                   <label>Add Activity to this Routine</label>
-                  <select // do this for myRoutines. select an option that adds that activity from all activities and submit.
+                  <select 
                     name="Activities"
                     id="select-activity"
-                    value={activityId} //set to id
+                    value={activityId}
                     onChange={(event) => {
                       setRoutineId(routine.id);
                       setActivityId(event.target.value);
