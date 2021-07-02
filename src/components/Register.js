@@ -8,7 +8,7 @@ const Register = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         fetch(
-            "http://fitnesstrac-kr.herokuapp.com/api/users/register",
+            "https://fitnesstrac-kr.herokuapp.com/api/users/register",
             {
                 method: "POST",
                 headers: {
